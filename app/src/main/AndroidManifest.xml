@@ -39,7 +39,7 @@
             android:label="Pengaturan" />
 
         <activity
-            android:name=".ProfileActivity"
+            android:name=".ProfileActivityy"
             android:exported="false"
             android:label="Profile" />
 
