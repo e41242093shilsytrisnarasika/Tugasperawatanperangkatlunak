@@ -7,9 +7,9 @@
         android:label="Tugas Perawatan Perangkat Lunak"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-        <!-- Dashboard jadi halaman pertama -->
+        <!-- Login jadi halaman pertama -->
         <activity
-            android:name=".DashboardActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,9 +17,8 @@
             </intent-filter>
         </activity>
 
-        <!-- Login -->
         <activity
-            android:name=".LoginActivity"
+            android:name=".DashboardActivity"
             android:exported="false" />
 
         <!-- Laporan -->

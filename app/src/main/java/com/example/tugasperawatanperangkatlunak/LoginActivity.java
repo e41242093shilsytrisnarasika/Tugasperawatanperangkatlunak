@@ -23,6 +23,14 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        // Cek apakah sudah login sebelumnya
+        android.content.SharedPreferences prefs = getSharedPreferences("LoginPrefs", MODE_PRIVATE);
+        if (prefs.getBoolean("is_logged_in", false)) {
+            startActivity(new Intent(this, DashboardActivity.class));
+            finish();
+            return;
+        }
+
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
@@ -37,7 +45,10 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Login Berhasil", Toast.LENGTH_SHORT).show();
 
                     android.content.SharedPreferences prefs = getSharedPreferences("LoginPrefs", MODE_PRIVATE);
-                    prefs.edit().putString("username", user).apply();
+                    prefs.edit()
+                            .putBoolean("is_logged_in", true)
+                            .putString("username", user)
+                            .apply();
 
                     Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
                     startActivity(intent);
