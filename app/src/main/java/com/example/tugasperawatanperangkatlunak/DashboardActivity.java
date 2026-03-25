@@ -51,7 +51,9 @@ public class DashboardActivity extends AppCompatActivity {
         if (id == R.id.nav_profile) {
             Toast.makeText(DashboardActivity.this, "Profile dipilih", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_settings) {
-            Toast.makeText(DashboardActivity.this, "Pengaturan dipilih", Toast.LENGTH_SHORT).show();
+            android.content.Intent intent =
+                    new android.content.Intent(DashboardActivity.this, PengaturanActivity.class);
+            startActivity(intent);
         }
 
         drawerLayout.closeDrawers();
