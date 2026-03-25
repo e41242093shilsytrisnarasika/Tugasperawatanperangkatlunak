@@ -34,6 +34,11 @@
             android:exported="false"
             android:label="Pemesanan" />
 
+        <activity
+            android:name=".PengaturanActivity"
+            android:exported="false"
+            android:label="Pengaturan" />
+
     </application>
 
 </manifest>
