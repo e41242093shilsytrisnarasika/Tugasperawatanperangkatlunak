@@ -8,37 +8,29 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/form_pemesanan"
+        android:text="Form Pemesanan"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginBottom="24dp" />
 
     <EditText
-        android:id="@+id/etNamaPemesan"
+        android:id="@+id/edtNamaPemesan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:hint="@string/nama_pemesan"
-        android:inputType="textPersonName"
-        android:autofillHints="name"
-        android:layout_marginBottom="12dp" />
+        android:hint="Nama Pemesan" />
 
     <EditText
-        android:id="@+id/etDetailPesanan"
+        android:id="@+id/edtDetailPesanan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:hint="@string/detail_pesanan"
-        android:inputType="text"
-        android:autofillHints="none"
-        android:layout_marginBottom="24dp" />
+        android:hint="Detail Pesanan (misal: Service Laptop)"
+        android:layout_marginTop="16dp" />
 
     <Button
         android:id="@+id/btnKirimPesanan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:text="@string/kirim_pesanan"
-        android:layout_marginTop="8dp" />
+        android:text="KIRIM PESANAN"
+        android:layout_marginTop="24dp" />
 
 </LinearLayout>
