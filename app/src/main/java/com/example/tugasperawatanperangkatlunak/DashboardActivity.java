@@ -60,10 +60,18 @@ public class DashboardActivity extends AppCompatActivity {
 });
 
         // Fitur tombol kosongan
-        btnDashboard.setOnClickListener(v -> Toast.makeText(this, "Fitur Dashboard", Toast.LENGTH_SHORT).show());
-        btnLaporan.setOnClickListener(v -> Toast.makeText(this, "Fitur Laporan", Toast.LENGTH_SHORT).show());
+        btnDashboard.setOnClickListener(v ->
+                Toast.makeText(this, "Fitur Dashboard", Toast.LENGTH_SHORT).show());
+
+        btnLaporan.setOnClickListener(v -> {
+            android.content.Intent intent =
+                    new android.content.Intent(DashboardActivity.this, LaporanActivity.class);
+            startActivity(intent);
+        });
+
         btnPemesanan.setOnClickListener(v -> {
-            android.content.Intent intent = new android.content.Intent(DashboardActivity.this, PemesananActivity.class);
+            android.content.Intent intent =
+                    new android.content.Intent(DashboardActivity.this, PemesananActivity.class);
             startActivity(intent);
         });
     }
