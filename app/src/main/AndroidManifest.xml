@@ -7,23 +7,32 @@
         android:label="Tugas Perawatan Perangkat Lunak"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
+        <!-- Dashboard jadi halaman pertama -->
         <activity
-            android:name=".LoginActivity"
+            android:name=".DashboardActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <!-- Login -->
         <activity
-            android:name=".DashboardActivity"
-            android:exported="false"/>
+            android:name=".LoginActivity"
+            android:exported="false" />
 
+        <!-- Laporan -->
+        <activity
+            android:name=".LaporanActivity"
+            android:exported="false"
+            android:label="Laporan" />
+
+        <!-- Pemesanan -->
         <activity
             android:name=".PemesananActivity"
             android:exported="false"
-            android:label="Pemesanan"/>
+            android:label="Pemesanan" />
 
         <activity
             android:name=".PengaturanActivity"
@@ -31,4 +40,5 @@
             android:label="Pengaturan" />
 
     </application>
+
 </manifest>
