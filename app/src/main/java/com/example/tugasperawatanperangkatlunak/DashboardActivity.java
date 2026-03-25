@@ -50,7 +50,7 @@ public class DashboardActivity extends AppCompatActivity {
 
         if (id == R.id.nav_profile) {
             android.content.Intent intent =
-                    new android.content.Intent(DashboardActivity.this, ProfileActivity.class);
+                    new android.content.Intent(DashboardActivity.this, ProfileActivityy.class);
             startActivity(intent);
         } else if (id == R.id.nav_settings) {
             android.content.Intent intent =
