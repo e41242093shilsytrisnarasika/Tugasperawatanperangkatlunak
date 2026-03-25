@@ -1,36 +1,56 @@
 package com.example.tugasperawatanperangkatlunak;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class PemesananActivity extends AppCompatActivity {
 
-    EditText etNama, etDetail;
-    Button btnKirim;
+    EditText edtNamaPemesan, edtDetailPesanan;
+    Button btnKirimPesanan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pemesanan);
 
-        etNama = findViewById(R.id.etNamaPemesan);
-        etDetail = findViewById(R.id.etDetailPesanan);
-        btnKirim = findViewById(R.id.btnKirimPesanan);
+        edtNamaPemesan = findViewById(R.id.edtNamaPemesan);
+        edtDetailPesanan = findViewById(R.id.edtDetailPesanan);
+        btnKirimPesanan = findViewById(R.id.btnKirimPesanan);
 
-        btnKirim.setOnClickListener(v -> {
-            String nama = etNama.getText().toString();
-            String detail = etDetail.getText().toString();
+        btnKirimPesanan.setOnClickListener(v -> {
+            String nama = edtNamaPemesan.getText().toString().trim();
+            String detail = edtDetailPesanan.getText().toString().trim();
 
-            if (!nama.isEmpty() && !detail.isEmpty()) {
-                // Di sini kamu bisa menambahkan logika simpan ke database nanti
-                Toast.makeText(this, "Pesanan " + nama + " Berhasil Dikirim!", Toast.LENGTH_LONG).show();
-                finish(); // Kembali ke Dashboard
-            } else {
-                Toast.makeText(this, "Harap isi semua kolom", Toast.LENGTH_SHORT).show();
+            if (nama.isEmpty() || detail.isEmpty()) {
+                Toast.makeText(this, "Isi semua data dulu", Toast.LENGTH_SHORT).show();
+                return;
             }
+
+            String dataBaru = nama + " - " + detail;
+
+            SharedPreferences sharedPreferences = getSharedPreferences("DataPemesanan", MODE_PRIVATE);
+            String dataLama = sharedPreferences.getString("riwayat", "");
+
+            String dataGabung;
+            if (dataLama.isEmpty()) {
+                dataGabung = dataBaru;
+            } else {
+                dataGabung = dataBaru + "##" + dataLama;
+            }
+
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("riwayat", dataGabung);
+            editor.apply();
+
+            Toast.makeText(this, "Pesanan berhasil disimpan", Toast.LENGTH_SHORT).show();
+
+            edtNamaPemesan.setText("");
+            edtDetailPesanan.setText("");
         });
     }
 }
