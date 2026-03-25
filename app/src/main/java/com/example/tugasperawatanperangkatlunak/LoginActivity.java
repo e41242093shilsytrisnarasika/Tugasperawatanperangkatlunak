@@ -35,6 +35,10 @@ public class LoginActivity extends AppCompatActivity {
 
                 if(user.equals(dummyUser) && pass.equals(dummyPass)){
                     Toast.makeText(LoginActivity.this, "Login Berhasil", Toast.LENGTH_SHORT).show();
+
+                    android.content.SharedPreferences prefs = getSharedPreferences("LoginPrefs", MODE_PRIVATE);
+                    prefs.edit().putString("username", user).apply();
+
                     Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
                     startActivity(intent);
                     finish();

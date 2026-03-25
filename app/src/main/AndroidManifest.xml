@@ -39,6 +39,11 @@
             android:exported="false"
             android:label="Pengaturan" />
 
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false"
+            android:label="Profile" />
+
     </application>
 
 </manifest>
