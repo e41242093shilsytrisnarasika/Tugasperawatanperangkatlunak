@@ -4,4 +4,13 @@
     <string name="nama_pemesan">Nama Pemesan</string>
     <string name="detail_pesanan">Detail Pesanan (misal: Service Laptop)</string>
     <string name="kirim_pesanan">Kirim Pesanan</string>
+    <string name="profile_title">Profile</string>
+    <string name="label_nama_lengkap">Nama Lengkap</string>
+    <string name="label_email">Email</string>
+    <string name="label_no_hp">No. HP</string>
+    <string name="hint_nama_lengkap">Masukkan nama lengkap</string>
+    <string name="hint_email">Masukkan email</string>
+    <string name="hint_no_hp">Masukkan nomor HP</string>
+    <string name="btn_simpan_profil">Simpan Profil</string>
+    <string name="tv_username_default">Username: -</string>
 </resources>
