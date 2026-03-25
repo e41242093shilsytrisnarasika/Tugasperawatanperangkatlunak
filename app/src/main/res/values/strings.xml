@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">tugasperawatanperangkatLunak</string>
+    <string name="app_name">Tugas Perawatan Perangkat Lunak</string>
+    <string name="form_pemesanan">Form Pemesanan</string>
+    <string name="nama_pemesan">Nama Pemesan</string>
+    <string name="detail_pesanan">Detail Pesanan (misal: Service Laptop)</string>
+    <string name="kirim_pesanan">Kirim Pesanan</string>
 </resources>

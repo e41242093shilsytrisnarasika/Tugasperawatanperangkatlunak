@@ -7,19 +7,23 @@
         android:label="Tugas Perawatan Perangkat Lunak"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-        <!-- Login sebagai launcher -->
         <activity
             android:name=".LoginActivity"
-            android:exported="true">   <!-- WAJIB ditambahkan -->
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
-        <!-- Dashboard -->
         <activity
             android:name=".DashboardActivity"
-            android:exported="false"/> <!-- tidak ada intent-filter, jadi bisa false -->
+            android:exported="false"/>
+
+        <activity
+            android:name=".PemesananActivity"
+            android:exported="false"
+            android:label="Pemesanan"/>
+
     </application>
 </manifest>
