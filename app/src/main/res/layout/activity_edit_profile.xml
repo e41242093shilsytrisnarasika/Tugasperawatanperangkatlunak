@@ -14,18 +14,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Form Pemesanan"
-            android:textSize="26sp"
+            android:text="Edit Profil"
+            android:textSize="28sp"
             android:textStyle="bold"
             android:textColor="#B89AEB"
             android:layout_marginBottom="24dp" />
 
-        <!-- Input Nama Pemesan -->
+        <!-- Input Nama -->
         <EditText
-            android:id="@+id/edtNamaPemesan"
+            android:id="@+id/et_nama_lengkap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nama Pemesan"
+            android:hint="Nama Lengkap"
             android:inputType="textPersonName"
             android:padding="12dp"
             android:backgroundTint="#B89AEB"
@@ -33,25 +33,38 @@
             android:textColorHint="#9C27B0"
             android:layout_marginBottom="16dp" />
 
-        <!-- Input Detail Pesanan -->
+        <!-- Input Email -->
         <EditText
-            android:id="@+id/edtDetailPesanan"
+            android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Detail Pesanan (misal: Service Laptop)"
-            android:inputType="textCapSentences"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
             android:padding="12dp"
             android:backgroundTint="#B89AEB"
             android:textColor="#4A148C"
             android:textColorHint="#9C27B0"
-            android:layout_marginBottom="24dp" />
+            android:layout_marginBottom="16dp" />
 
-        <!-- Tombol Kirim -->
-        <Button
-            android:id="@+id/btnKirimPesanan"
+        <!-- Input No HP -->
+        <EditText
+            android:id="@+id/et_no_hp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="KIRIM PESANAN"
+            android:hint="No HP"
+            android:inputType="phone"
+            android:padding="12dp"
+            android:backgroundTint="#B89AEB"
+            android:textColor="#4A148C"
+            android:textColorHint="#9C27B0"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Tombol Simpan -->
+        <Button
+            android:id="@+id/btn_simpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
             android:textSize="16sp"
             android:backgroundTint="#B89AEB"
             android:textColor="#FFFFFF"
