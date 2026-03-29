@@ -22,7 +22,7 @@ public class ProfileActivity extends AppCompatActivity {
         tvNoHp        = findViewById(R.id.tv_no_hp);
         btnEdit       = findViewById(R.id.btn_edit);
 
-        // Data awal dummy
+        // Data awal dummy cokkkkkkkkk
         tvUsername.setText("Username: admin123");
         tvNamaLengkap.setText("Nama Lengkap: Wafiq Hidayat");
         tvEmail.setText("Email: wafiq@example.com");
