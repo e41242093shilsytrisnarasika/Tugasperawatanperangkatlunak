@@ -17,9 +17,10 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="#B89AEB"
             android:title="Dashboard"
-            android:titleTextColor="@android:color/white"/>
+            android:titleTextColor="@android:color/white"
+            android:elevation="6dp"/>
 
         <!-- Isi fitur -->
         <LinearLayout
@@ -27,27 +28,37 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="24dp">
+            android:padding="24dp"
+            android:background="#F5F0FA">
 
             <Button
                 android:id="@+id/btnDashboard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dashboard"/>
+                android:text="Dashboard"
+                android:backgroundTint="#B89AEB"
+                android:textColor="@android:color/white"
+                android:elevation="4dp"/>
 
             <Button
                 android:id="@+id/btnLaporan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Laporan"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#B89AEB"
+                android:textColor="@android:color/white"
+                android:elevation="4dp"/>
 
             <Button
                 android:id="@+id/btnPemesanan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Pemesanan"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#B89AEB"
+                android:textColor="@android:color/white"
+                android:elevation="4dp"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -59,5 +70,8 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         android:background="@android:color/white"
+        app:itemIconTint="#B89AEB"
+        app:itemTextColor="#4A148C"
+        app:headerLayout="@layout/drawer_header"
         app:menu="@menu/drawer_menu"/>
 </androidx.drawerlayout.widget.DrawerLayout>

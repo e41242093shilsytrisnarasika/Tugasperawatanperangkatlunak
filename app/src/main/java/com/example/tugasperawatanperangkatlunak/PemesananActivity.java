@@ -47,7 +47,7 @@ public class PemesananActivity extends AppCompatActivity {
             editor.putString("riwayat", dataGabung);
             editor.apply();
 
-            Toast.makeText(this, "Pesanan berhasil disimpan", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Pesanan berhasil dikirim", Toast.LENGTH_SHORT).show();
 
             edtNamaPemesan.setText("");
             edtDetailPesanan.setText("");
