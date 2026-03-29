@@ -1,5 +1,6 @@
 package com.example.tugasperawatanperangkatlunak;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -16,11 +17,21 @@ public class LaporanActivity extends AppCompatActivity {
         setContentView(R.layout.activity_laporan);
 
         layoutRiwayat = findViewById(R.id.layoutRiwayat);
+        SharedPreferences sharedPreferences = getSharedPreferences("DataPemesanan", MODE_PRIVATE);
+        String dataRiwayat = sharedPreferences.getString("riwayat", "");
 
-        // Selalu tampilkan error, tidak menampilkan laporan
-        TextView error = new TextView(this);
-        error.setText("Error: Laporan tidak dapat ditampilkan");
-        error.setTextSize(18);
-        layoutRiwayat.addView(error);
+        if (dataRiwayat.isEmpty()) {
+            TextView kosong = new TextView(this);
+            kosong.setText("Belum ada data pemesanan");
+            layoutRiwayat.addView(kosong);
+        } else {
+            String[] daftarPesanan = dataRiwayat.split("##");
+
+            for (String pesanan : daftarPesanan) {
+                TextView item = new TextView(this);
+                item.setText(pesanan);
+                layoutRiwayat.addView(item);
+            }
+        }
     }
 }

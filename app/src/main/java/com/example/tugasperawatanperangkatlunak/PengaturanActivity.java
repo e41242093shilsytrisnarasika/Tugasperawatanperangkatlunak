@@ -13,14 +13,13 @@ public class PengaturanActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Pastikan nama file XML sesuai dengan yang kamu buat (activity_pengaturan.xml)
         setContentView(R.layout.activity_pengaturan);
 
         btnKeluar = findViewById(R.id.btn_keluar);
 
         btnKeluar.setOnClickListener(v -> {
-            // Tidak keluar aplikasi, hanya tampilkan pesan error
-            Toast.makeText(this, "Terjadi kesalahan saat logout!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Logout berhasil", Toast.LENGTH_SHORT).show();
+            finish();
         });
     }
 }
