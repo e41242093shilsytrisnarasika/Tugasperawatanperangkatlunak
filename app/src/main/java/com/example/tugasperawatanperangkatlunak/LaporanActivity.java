@@ -22,7 +22,7 @@ public class LaporanActivity extends AppCompatActivity {
 
         if (dataRiwayat.isEmpty()) {
             TextView kosong = new TextView(this);
-            kosong.setText("Belum ada data pemesanan");
+            kosong.setText("Belum ada data pemesanan brooo");
             layoutRiwayat.addView(kosong);
         } else {
             String[] daftarPesanan = dataRiwayat.split("##");
