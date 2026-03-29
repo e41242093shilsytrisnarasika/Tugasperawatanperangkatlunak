@@ -30,7 +30,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         // Tombol edit: sengaja tidak melakukan apa-apa
         btnEdit.setOnClickListener(v -> {
-            // Kosong, tidak ada aksi
+            // Kosong, tidak ada aksi trsna
         });
     }
 }
